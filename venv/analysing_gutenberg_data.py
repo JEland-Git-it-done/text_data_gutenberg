@@ -10,23 +10,42 @@ guten = nltk.corpus.gutenberg
 def analyse_book():
     user_is_analysing = True
     user_is_finished = False
+    print("Priting information about the selectable books")
+    print("Gutenberg files : ", guten.fileids())
+    print("Please input your preference, the options can be seen above, please ensure that your input is valid: ")
     while user_is_analysing and not user_is_finished:
         #own work to allow users to implement functions onto a book
-        print("Priting information about the selected book")
-        print("Gutenberg files : ", guten.fileids())
-        gutenberg_checker = guten.fileids()
-        print("Please input your preference, the options can be seen above, please ensure that your input is valid: ")
+        gt_checker = guten.fileids()
+
         user_in = input()
-        if user_in in gutenberg_checker:
+        simple_in = user_in + ".txt"
+        if user_in in gt_checker:
+            print(user_in)
             print("This input was valid, starting the analysis, a menu will appear shortly")
             book = nltk.corpus.gutenberg.words(user_in)
-            print(book)
+            print_menu()
+            #print(book)
             user_is_finished=True
+        elif simple_in in gt_checker:
+            print(simple_in)
+            print("This input was valid, starting the analysis, a menu will appear shortly")
+            book = nltk.corpus.gutenberg.words(simple_in)
+            print_menu()
+            #print(book)
 
         else:
-            print("This input was invalid, returning to start")
+            print("This input was invalid - please ensure the input is the same as the file above ")
 
 
+def print_menu():
+    print("Printing menu ...")
+    for i in range(3):
+        print("*****")
+    options = ["Find basic information", "Count number of words", "Print the first 100 words",
+               "Print the first 10 sents", "Find most common words", "Find Text"]
+    for i in range(len(options)):
+        x = i+1
+        print("{0}: {1}".format(str(x), options[i]))
 def analyse_macbeth():
     #Priting simple information about macbeth
     print("Printing simple information on MacBeth")
