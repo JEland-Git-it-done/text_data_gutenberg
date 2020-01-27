@@ -1,18 +1,31 @@
-import nltk
+import nltk as nltk
 
 #nltk.download_shell()
-nltk.download("gutenberg")
-ntlk.download("stopwords")
+#nltk.download("gutenberg")
+#nltk.download("stopwords")
 
 guten = nltk.corpus.gutenberg
-print("Gutenberg files : ", guten.fileids())
+#print("Gutenberg files : ", guten.fileids())
 
 def analyse_book():
-    #own work to allow users to implement functions onto a book
-    print("Priting information about the selected book")
-    print("Please input your preference, the options are as follows, please ensure you type the name of the book correctly:\n", guten.fileids)
-    user_in = input()
-    book = nltk.corpus.gutenberg.words(user_in)
+    user_is_analysing = True
+    user_is_finished = False
+    while user_is_analysing and not user_is_finished:
+        #own work to allow users to implement functions onto a book
+        print("Priting information about the selected book")
+        print("Gutenberg files : ", guten.fileids())
+        gutenberg_checker = guten.fileids()
+        print("Please input your preference, the options can be seen above, please ensure that your input is valid: ")
+        user_in = input()
+        if user_in in gutenberg_checker:
+            print("This input was valid, starting the analysis, a menu will appear shortly")
+            book = nltk.corpus.gutenberg.words(user_in)
+            print(book)
+            user_is_finished=True
+
+        else:
+            print("This input was invalid, returning to start")
+
 
 def analyse_macbeth():
     #Priting simple information about macbeth
@@ -33,5 +46,4 @@ def find_text_macbeth():
     print("***")
     text.concordance("Wife")#Since the play is about a man and his wife, this seems like an apt search figure
     text.concordance("Dragon")
-
-find_text_macbeth()
+analyse_book()
