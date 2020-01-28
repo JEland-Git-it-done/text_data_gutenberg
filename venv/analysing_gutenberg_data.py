@@ -30,8 +30,11 @@ def analyse_book():
             print(simple_in)
             print("This input was valid, starting the analysis, a menu will appear shortly")
             book = nltk.corpus.gutenberg.words(simple_in)
-            print_menu()
+            options = print_menu()
             #print(book)
+            print("Please type the number of the analyis you want to undertake: ")
+            menu_in = input()
+            select_function(menu_in, options)
 
         else:
             print("This input was invalid - please ensure the input is the same as the file above ")
@@ -42,10 +45,17 @@ def print_menu():
     for i in range(3):
         print("*****")
     options = ["Find basic information", "Count number of words", "Print the first 100 words",
-               "Print the first 10 sents", "Find most common words", "Find Text"]
+               "Print the first 10 sents", "Find most common words", "Find Text", "Quit analysis"]
     for i in range(len(options)):
         x = i+1
         print("{0}: {1}".format(str(x), options[i]))
+    return options
+
+def select_function(user_in, options):
+    print("Working...")
+    for i in range(len(options)):
+        if int(user_in) == i:
+            print(options[i])
 def analyse_macbeth():
     #Priting simple information about macbeth
     print("Printing simple information on MacBeth")
@@ -65,4 +75,6 @@ def find_text_macbeth():
     print("***")
     text.concordance("Wife")#Since the play is about a man and his wife, this seems like an apt search figure
     text.concordance("Dragon")
+
+
 analyse_book()

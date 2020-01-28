@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="147a81cd-a58b-4379-a145-900a4b39a156" name="Default Changelist" comment="" />
+    <list default="true" id="147a81cd-a58b-4379-a145-900a4b39a156" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/analysing_gutenberg_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/analysing_gutenberg_data.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +17,27 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\jedel\PycharmProjects\text_data_gutenberg\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1WkQohmf0W5ADtfdX1C02d3iuRc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="analysing_gutenberg_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -75,5 +91,31 @@
       <updated>1579691289271</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1579710933626">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579710933626" />
+    <state width="1150" height="258" key="GridCell.Tab.0.bottom" timestamp="1580144724583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1150" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580144724583" />
+    <state width="1150" height="258" key="GridCell.Tab.0.center" timestamp="1580144724583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1150" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580144724583" />
+    <state width="1150" height="258" key="GridCell.Tab.0.left" timestamp="1580144724583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1150" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580144724583" />
+    <state width="1150" height="258" key="GridCell.Tab.0.right" timestamp="1580144724583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1150" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580144724583" />
+    <state x="624" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580220048795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580220048795" />
   </component>
 </project>
