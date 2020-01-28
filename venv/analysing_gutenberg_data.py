@@ -23,9 +23,11 @@ def analyse_book():
             print(user_in)
             print("This input was valid, starting the analysis, a menu will appear shortly")
             book = nltk.corpus.gutenberg.words(user_in)
-            print_menu()
+            options = print_menu()
             #print(book)
-            user_is_finished=True
+            print("Please type the number of the analyis you want to undertake: ")
+            menu_in = input()
+            select_function(menu_in, options, book)
         elif simple_in in gt_checker:
             print(simple_in)
             print("This input was valid, starting the analysis, a menu will appear shortly")
@@ -34,7 +36,7 @@ def analyse_book():
             #print(book)
             print("Please type the number of the analyis you want to undertake: ")
             menu_in = input()
-            select_function(menu_in, options)
+            select_function(menu_in, options, book)
 
         else:
             print("This input was invalid - please ensure the input is the same as the file above ")
@@ -51,11 +53,20 @@ def print_menu():
         print("{0}: {1}".format(str(x), options[i]))
     return options
 
-def select_function(user_in, options):
+def select_function(user_in, options, book):
     print("Working...")
+    used_book = book
+    selected = False
+    actions = {"1": basic_info(used_book)}
     for i in range(len(options)):
         if int(user_in) == i:
-            print(options[i])
+            print(options[i-1])
+            actions.get(str(i))
+
+
+def basic_info(book):
+    print("There are {0} words in the text".format(len(book)))
+    print("The first 10 words are : {0}\nThe last 10 words are : {1}".format(book[:10], book[-11:-1]))
 def analyse_macbeth():
     #Priting simple information about macbeth
     print("Printing simple information on MacBeth")
